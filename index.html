@@ -1,1 +1,36 @@
-Hello world
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gotcha Jade</title>
+  </head>
+  <body>
+    <img src="ok.jpeg" alt="" width="300px" />
+    <div class="jade">GOTCHA JADE !!</div>
+    <style>
+      .jade {
+        position: absolute;
+        color: red;
+        font-size: 30pt;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        transition: 0.3s;
+        opacity: 0;
+      }
+
+      .visible {
+        opacity: 1;
+      }
+    </style>
+    <script>
+      setTimeout(() => {
+        document.getElementsByClassName("jade")[0].classList.add("visible");
+        setTimeout(() => {
+          alert("GOTCHA JADE");
+        }, 800);
+      }, 500);
+    </script>
+  </body>
+</html>
